@@ -1,4 +1,4 @@
-package com.example.demowt.test.interfaces;
+package com.example.demowt.streamlearn.interfaces;
 
 @FunctionalInterface
 public interface OperFunction<R, T> {

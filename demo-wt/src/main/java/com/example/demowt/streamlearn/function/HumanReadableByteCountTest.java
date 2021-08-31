@@ -1,4 +1,4 @@
-package com.example.demowt.test.function;
+package com.example.demowt.streamlearn.function;
 
 /**
  * <a href="https://mp.weixin.qq.com/s/9MyxkmLWnHAs9areu9_aqg">人类可读格式：b -> m</a>

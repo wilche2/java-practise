@@ -1,4 +1,4 @@
-package com.example.demowt.test.view;
+package com.example.demowt.streamlearn.view;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

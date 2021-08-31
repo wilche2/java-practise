@@ -1,6 +1,6 @@
-package com.example.demowt.test.stream;
+package com.example.demowt.streamlearn.stream;
 
-import com.example.demowt.test.view.Student;
+import com.example.demowt.streamlearn.view.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;

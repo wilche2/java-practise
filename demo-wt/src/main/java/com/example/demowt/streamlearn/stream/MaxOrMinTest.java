@@ -1,4 +1,4 @@
-package com.example.demowt.test.stream;
+package com.example.demowt.streamlearn.stream;
 
 import java.util.Arrays;
 import java.util.Comparator;
