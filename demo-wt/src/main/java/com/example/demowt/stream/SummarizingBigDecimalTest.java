@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @author caowq
  * @date 2021-08-26 11:53
  */
-public class SummarizingBigDecimal {
+public class SummarizingBigDecimalTest {
 
     public static void main(String[] args) {
         test2();
