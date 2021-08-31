@@ -1,12 +1,15 @@
 package com.example.demowt.strategy;
 
-import com.example.demowt.strategy.common.TravelCommonInit;
 import com.example.demowt.strategy.domain.Travel;
+import com.example.demowt.strategy.service.ITravelService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.example.demowt.strategy.common.TravelCommonInit.travelServiceMap;
 
 /**
  * @author caowq
@@ -15,10 +18,18 @@ import java.util.List;
 @SpringBootTest
 public class TravelTest {
 
+    @Resource
+    private ITravelService travelService;
+
     @Test
     public void travelTest1() {
-        List<Travel> travelByCondition = TravelCommonInit.travelServiceMap.get("GL").getTravelByCondition("test1", "wilche");
+        List<Travel> travelByCondition = getTravelService("GL").getTravelByCondition("test1", "wilche");
         System.out.println("travelByCondition = " + Arrays.toString(travelByCondition.toArray()));
+    }
+
+    private ITravelService getTravelService(String type) {
+        ITravelService service = travelServiceMap.get(type);
+        return service == null ? this.travelService : service;
     }
 
 }
