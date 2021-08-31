@@ -1,9 +1,9 @@
-package com.example.demowt.stream;
+package com.example.demowt.test.stream;
 
 
 import com.example.bigdecimalstat.utils.BigDecimalSummaryStatistics;
 import com.example.bigdecimalstat.utils.CollectorsUtil;
-import com.example.demowt.view.Student;
+import com.example.demowt.test.view.Student;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

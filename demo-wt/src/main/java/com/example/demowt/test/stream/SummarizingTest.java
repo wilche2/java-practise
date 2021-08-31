@@ -1,6 +1,6 @@
-package com.example.demowt.stream;
+package com.example.demowt.test.stream;
 
-import com.example.demowt.view.Student;
+import com.example.demowt.test.view.Student;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;

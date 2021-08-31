@@ -1,4 +1,4 @@
-package com.example.demowt.interfaces;
+package com.example.demowt.test.interfaces;
 
 @FunctionalInterface
 public interface OperFunction<R, T> {

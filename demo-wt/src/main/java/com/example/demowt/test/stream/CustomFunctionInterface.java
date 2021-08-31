@@ -1,6 +1,6 @@
-package com.example.demowt.stream;
+package com.example.demowt.test.stream;
 
-import com.example.demowt.interfaces.OperFunction;
+import com.example.demowt.test.interfaces.OperFunction;
 
 /**
  * @author caowq

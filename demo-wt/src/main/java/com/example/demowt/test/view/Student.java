@@ -1,4 +1,4 @@
-package com.example.demowt.view;
+package com.example.demowt.test.view;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

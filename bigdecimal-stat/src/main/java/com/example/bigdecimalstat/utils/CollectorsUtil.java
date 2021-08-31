@@ -36,7 +36,7 @@ public class CollectorsUtil {
     }
 
     public static <T> Collector<T, ?, BigDecimalSummaryStatistics> summarizingBigDecimal(ToBigDecimalFunction<? super T> mapper) {
-        return new CollectorImpl<T, BigDecimalSummaryStatistics, BigDecimalSummaryStatistics>(
+        return new CollectorImpl<>(
                 BigDecimalSummaryStatistics::new,
                 (r, t) -> r.accept(mapper.applyAsBigDecimal(t)),
                 (l, r) -> {

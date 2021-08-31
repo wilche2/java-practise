@@ -1,4 +1,4 @@
-package com.example.demowt.stream;
+package com.example.demowt.test.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
