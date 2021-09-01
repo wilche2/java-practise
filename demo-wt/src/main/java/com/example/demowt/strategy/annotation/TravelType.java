@@ -1,5 +1,6 @@
 package com.example.demowt.strategy.annotation;
 
+import com.example.demowt.strategy.travelenum.TravelTypeEnum;
 import org.springframework.stereotype.Indexed;
 
 import java.lang.annotation.*;
@@ -11,5 +12,5 @@ import java.lang.annotation.*;
 @Inherited
 public @interface TravelType {
     String name() default "";
-    String[] value() default "";
+    TravelTypeEnum[] value() default TravelTypeEnum.TRAVEL_TYPE_BASE_OTHER;
 }

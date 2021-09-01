@@ -1,7 +1,6 @@
 package com.example.demowt.strategy.service.impl;
 
 import com.example.demowt.strategy.annotation.TravelType;
-import com.example.demowt.strategy.common.TravelConstants;
 import com.example.demowt.strategy.domain.Travel;
 import com.example.demowt.strategy.service.ITravelService;
 import com.example.demowt.strategy.travelenum.TravelTypeEnum;
@@ -15,7 +14,7 @@ import java.util.List;
  * @date 2021-08-31 17:09
  */
 @Service
-@TravelType(value = {TravelConstants.TRAVEL_TYPE_BASE_CULTURAL_LANDSCAPE})
+@TravelType(value = {TravelTypeEnum.TRAVEL_TYPE_BASE_CULTURAL_LANDSCAPE})
 public class CulturalLandscapeTravelService implements ITravelService {
 
     @Override

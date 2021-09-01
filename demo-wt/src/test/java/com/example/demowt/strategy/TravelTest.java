@@ -2,6 +2,7 @@ package com.example.demowt.strategy;
 
 import com.example.demowt.strategy.domain.Travel;
 import com.example.demowt.strategy.service.ITravelService;
+import com.example.demowt.strategy.travelenum.TravelTypeEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -23,11 +24,11 @@ public class TravelTest {
 
     @Test
     public void travelTest1() {
-        List<Travel> travelByCondition = getTravelService("GL").getTravelByCondition("test1", "wilche");
+        List<Travel> travelByCondition = getTravelService(TravelTypeEnum.TRAVEL_TYPE_BASE_CULTURAL_LANDSCAPE).getTravelByCondition("test1", "wilche");
         System.out.println("travelByCondition = " + Arrays.toString(travelByCondition.toArray()));
     }
 
-    private ITravelService getTravelService(String type) {
+    private ITravelService getTravelService(TravelTypeEnum type) {
         ITravelService service = travelServiceMap.get(type);
         return service == null ? this.travelService : service;
     }

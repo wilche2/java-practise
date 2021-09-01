@@ -2,6 +2,7 @@ package com.example.demowt.strategy.common;
 
 import com.example.demowt.strategy.annotation.TravelType;
 import com.example.demowt.strategy.service.ITravelService;
+import com.example.demowt.strategy.travelenum.TravelTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -21,7 +22,7 @@ import java.util.Set;
 @Component
 public class TravelCommonInit implements ApplicationContextAware {
 
-    public static Map<String, ITravelService> travelServiceMap = new HashMap<>();
+    public static Map<TravelTypeEnum, ITravelService> travelServiceMap = new HashMap<>();
 
     private ApplicationContext applicationContext;
 
@@ -37,8 +38,8 @@ public class TravelCommonInit implements ApplicationContextAware {
         for (Map.Entry<String, Object> entry : entries) {
             if (entry.getValue() instanceof ITravelService) {
                 ITravelService obj = (ITravelService) entry.getValue();
-                String[] values = obj.getClass().getAnnotation(TravelType.class).value();
-                for (String value : values) {
+                TravelTypeEnum[] values = obj.getClass().getAnnotation(TravelType.class).value();
+                for (TravelTypeEnum value : values) {
                     log.info("注入对象 value={}, obj={}", value, obj);
                     travelServiceMap.put(value, obj);
                 }
